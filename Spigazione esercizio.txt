@@ -1,0 +1,19 @@
+Esercizio del 02/08/2024
+
+Nella simulazione di rete in allegato,
+ho simulato la possibile rete di un azienda coi vari uffici divisi ( Acquisti,Amministrazione,Vendite,Direzione) con la
+particolarità che ogni ufficio abbia un direttore ed ogni direttore di ufficio possa scambiare informazione con la Direzione e i direttori di ogni settore.
+Infine ho deciso di creare un sala server con 2 server i quali potevano interagire solo con  2 VLAN distinte ( Server Vip con rete VLAN 40 Vip e Server Vendite con rete VLAN 50 Vendite ).
+
+- Per questo ho deciso di creare  4 VLAN distinte (20 Acquisti,30 Amministrazione,40 Vip,50 Vendite).
+
+- Ho collegato ogni host a degli switch associandoli un numero VLAN distinto in base all' ufficio o mansione.
+
+- a mia volta ho collegato gli switch ad un unico switch centrale attraverso delle porte Trunk in modo che tutte le VLAN potessero comunicare con lo switch centrale.
+
+- in seguito ho eseguito dei test di ping tra i vari direttori di diversi uffici, constatando la perfetta comunicazione tra le macchine.
+
+- infine ho creato una sala server con 2 server distinti i quali comunicano solo con 2 reti VLAN distinte ( uno comunica con i Vip e l' altro con le Vendite).
+
+Conclusione : ho scelto di ricorrere all'utilizzo delle reti VLAN in modo da separare i vari settori dell' azienda per migliorare il traffico di rete di ogni ufficio e la riservatezza della direzione nel caso del server accessibile solo tramite terminale Vip.
+  
